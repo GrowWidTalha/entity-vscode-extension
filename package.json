@@ -1,0 +1,45 @@
+{
+    "name": "html-entity-converter",
+    "displayName": "HTML Entity Converter",
+    "description": "Automatically converts special characters to HTML entities in HTML and JSX files",
+    "version": "0.0.1",
+    "publisher": "YourPublisherName",
+    "engines": {
+      "vscode": "^1.60.0"
+    },
+    "categories": [
+      "Other"
+    ],
+    "activationEvents": [
+      "onLanguage:html",
+      "onLanguage:javascriptreact"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+      "commands": []
+    },
+    "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "pretest": "npm run compile && npm run lint",
+      "lint": "eslint src --ext ts",
+      "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+      "@types/vscode": "^1.60.0",
+      "@types/node": "^14.14.37",
+      "@typescript-eslint/eslint-plugin": "^4.22.0",
+      "@typescript-eslint/parser": "^4.22.0",
+      "eslint": "^7.25.0",
+      "typescript": "^4.2.4"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/YourUsername/html-entity-converter.git"
+    },
+    "bugs": {
+      "url": "https://github.com/YourUsername/html-entity-converter/issues"
+    },
+    "homepage": "https://github.com/YourUsername/html-entity-converter#readme"
+  }
